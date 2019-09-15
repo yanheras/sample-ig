@@ -35,4 +35,14 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">TEST MENU ITEM<b class="caret">
+    </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="test-menu-page.html">TEST MENU ITEM</a>
+      </li>
+    </ul>
+  </li>
 </ul>      

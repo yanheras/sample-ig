@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="PatientJoe"/>
+  <url value="http://example.org/fhir/uv/myig/StructureDefinition/PatientJoe"/>
+  <name value="PatientJoe"/>
+  <title value="Patient Joe Profile"/>
+  <status value="draft"/>
+  <description value="A profile for patient Joe"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Patient"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+  <derivation value="constraint"/>
+  <differential>
+<!--  <element id="Patient.identifier">
+      <path value="Patient.identifier"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="system"/>
+        </discriminator>
+        <ordered value="false"/>
+        <rules value="open"/>
+      </slicing>
+      <min value="1"/>
+      <max value="*"/>
+    </element>
+    <element id="Patient.identifier:sliceNPI">
+      <path value="Patient.identifier"/>
+      <sliceName value="sliceNPI"/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Patient.identifier:sliceNPI.system">
+      <path value="Patient.identifier.system"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedUri value="uri:orn:1.3.2"/>
+    </element> -->
+  <element id="Patient.name">
+      <path value="Patient.name"/>
+      <min value="0"/>
+      <max value="1"/>
+    </element>
+    <element id="Patient.name.use">
+      <path value="Patient.name.use"/>
+      <fixedCode value="usual"/>
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family"/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+   <element id="Patient.gender">
+      <path value="Patient.gender"/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Patient.gender.value">
+      <path value="Patient.gender.value"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedCode value="male"/>
+    </element>
+    <element id="Patient.maritalStatus">
+      <path value="Patient.maritalStatus"/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+  </differential>
+</StructureDefinition>
